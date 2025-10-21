@@ -14,4 +14,8 @@ export const routes: Routes = [
     path: 'history-chat',
     loadComponent: () => import('./pages/history-chat/history-chat.page').then( m => m.HistoryChatPage)
   },
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
+  },
 ];
