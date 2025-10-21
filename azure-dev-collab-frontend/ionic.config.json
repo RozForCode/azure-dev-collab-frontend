@@ -1,0 +1,7 @@
+{
+  "name": "azure-dev-collab-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
