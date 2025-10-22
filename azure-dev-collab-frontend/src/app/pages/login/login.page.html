@@ -4,10 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Login</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header><ion-segment [(ngModel)]="activeTab" value="login">
+    <ion-segment-button value="login">
+      <ion-label>Login</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="register">
+      <ion-label>Register</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="form-container">
+    <app-user-log-in *ngIf="activeTab === 'login'"></app-user-log-in>
+    <app-user-register *ngIf="activeTab === 'register'"></app-user-register>
+  </div>
 </ion-content>
