@@ -1,3 +1,21 @@
-<p>
-  team-members works!
-</p>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Team Members</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let member of teamMembers">
+      <ion-avatar slot="start">
+        <img [src]="member.avatar">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ member.name }}</h2>
+        <p>{{ member.role }}</p>
+      </ion-label>
+      <ion-badge *ngIf="member.online" color="success">Online</ion-badge>
+      <ion-badge *ngIf="!member.online" color="medium">Offline</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
